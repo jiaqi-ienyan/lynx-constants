@@ -1,26 +1,20 @@
 {
-  "name": "@lido-sdk/constants",
+  "name": "@lynx-sdk/constants",
   "version": "0.0.0-semantic-release",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "license": "MIT",
-  "homepage": "https://github.com/lidofinance/lido-js-sdk",
+  "homepage": "https://github.com/jiaqi-ienyan/lynx-constants",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lidofinance/lido-js-sdk.git",
+    "url": "https://github.com/jiaqi-ienyan/lynx-constants.git",
     "directory": "packages/constants"
   },
   "bugs": {
-    "url": "https://github.com/lidofinance/lido-js-sdk/issues"
+    "url": "https://github.com/jiaqi-ienyan/lynx-constants/issues"
   },
   "sideEffects": false,
-  "keywords": [
-    "lido",
-    "lido-sdk",
-    "lido-js-sdk",
-    "lidofinance"
-  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
