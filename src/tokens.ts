@@ -1,4 +1,4 @@
-import invariant from 'tiny-invariant'
+import * as invariant from 'tiny-invariant'
 import { CHAINS } from './chains'
 
 export enum TOKENS {

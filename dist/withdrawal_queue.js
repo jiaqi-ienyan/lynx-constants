@@ -2,7 +2,7 @@
 var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getWithdrawalQueueAddress = exports.WITHDRAWAL_QUEUE_BY_NETWORK = void 0;
-var tiny_invariant_1 = require("tiny-invariant");
+var invariant = require("tiny-invariant");
 var chains_1 = require("./chains");
 exports.WITHDRAWAL_QUEUE_BY_NETWORK = (_a = {},
     _a[chains_1.CHAINS.Mainnet] = '0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1',
@@ -11,7 +11,7 @@ exports.WITHDRAWAL_QUEUE_BY_NETWORK = (_a = {},
     _a);
 var getWithdrawalQueueAddress = function (chainId) {
     var address = exports.WITHDRAWAL_QUEUE_BY_NETWORK[chainId];
-    (0, tiny_invariant_1.default)(address, 'Chain is not supported');
+    invariant(address, 'Chain is not supported');
     return address;
 };
 exports.getWithdrawalQueueAddress = getWithdrawalQueueAddress;

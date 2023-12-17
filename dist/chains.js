@@ -2,7 +2,7 @@
 var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getChainColor = exports.CHAINS_COLORS = exports.CHAINS_IDS = exports.CHAINS = void 0;
-var tiny_invariant_1 = require("tiny-invariant");
+var invariant = require("tiny-invariant");
 var CHAINS;
 (function (CHAINS) {
     CHAINS[CHAINS["Mainnet"] = 1] = "Mainnet";
@@ -21,13 +21,7 @@ var CHAINS;
     CHAINS[CHAINS["Fuji"] = 43113] = "Fuji";
     CHAINS[CHAINS["Avalanche"] = 43114] = "Avalanche";
 })(CHAINS || (exports.CHAINS = CHAINS = {}));
-exports.CHAINS_IDS = [
-    CHAINS.Mainnet,
-    CHAINS.Ropsten,
-    CHAINS.Rinkeby,
-    CHAINS.Goerli,
-    CHAINS.Kovan,
-];
+exports.CHAINS_IDS = [CHAINS.Mainnet, CHAINS.Ropsten, CHAINS.Rinkeby, CHAINS.Goerli, CHAINS.Kovan];
 exports.CHAINS_COLORS = (_a = {},
     _a[CHAINS.Mainnet] = '#29b6af',
     _a[CHAINS.Ropsten] = '#ff4a8d',
@@ -37,7 +31,7 @@ exports.CHAINS_COLORS = (_a = {},
     _a);
 var getChainColor = function (chainId) {
     var color = exports.CHAINS_COLORS[chainId];
-    (0, tiny_invariant_1.default)(color != null, 'Chain is not supported');
+    invariant(color != null, 'Chain is not supported');
     return color;
 };
 exports.getChainColor = getChainColor;

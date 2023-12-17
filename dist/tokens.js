@@ -2,7 +2,7 @@
 var _a, _b, _c, _d, _e, _f;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getTokenAddress = exports.TOKENS_BY_NETWORK = exports.TOKENS = void 0;
-var tiny_invariant_1 = require("tiny-invariant");
+var invariant = require("tiny-invariant");
 var chains_1 = require("./chains");
 var TOKENS;
 (function (TOKENS) {
@@ -37,9 +37,9 @@ exports.TOKENS_BY_NETWORK = (_a = {},
     _a);
 var getTokenAddress = function (chainId, token) {
     var tokens = exports.TOKENS_BY_NETWORK[chainId];
-    (0, tiny_invariant_1.default)(tokens, 'Chain is not supported');
+    invariant(tokens, 'Chain is not supported');
     var address = tokens[token];
-    (0, tiny_invariant_1.default)(address, 'Token is not supported');
+    invariant(address, 'Token is not supported');
     return address;
 };
 exports.getTokenAddress = getTokenAddress;
